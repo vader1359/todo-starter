@@ -6,8 +6,17 @@
 </form>
 
 <!-- list 1  -->
-<div class="list">
-  <form class="update-all" action="lists/update" method="post">
+
+<div class="list_board">
+  <!-- Need to send  -->
+  
+  
+</div>
+
+
+<form class="update-all" action="lists/update" method="post">
+
+  <div class="list">
     <input type="hidden" name="id" value="<%= list.id %>">
     <input type="hidden" name="name" value="<%= list.name %>">
     <div class="list-header-container">
@@ -19,14 +28,20 @@
     <ul class="js-sortable-items">
       <% list.items.each_with_index do |item, index| %>
       <%= erb :"shared/_item.html", locals: {item: item} %>
+      <!-- Render  -->
       <% end %>
     </ul>
   </form>
+
+  
   <form class="add-item" action="lists/<%= list.id %>/items/add" method="post">
     <input type="text" name="name" class="new-item" placeholder="Add an item..." required>
-  </form>
+  </div>
+
   
-</div>
+</form>
+
+
 
 <!-- Need to render a new list here  -->
 

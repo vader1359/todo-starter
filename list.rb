@@ -38,5 +38,5 @@ class List
     lines = [name] + @items.map(&:display_line)
     File.write(filename, lines.join("\n"))
   end
-  
-end
+
+end 

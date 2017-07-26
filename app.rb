@@ -11,9 +11,19 @@ get "/" do
   # HINT: you can use instance variables in the view directly without passing to locals
   # such as this @title instance variable
   @title = "Your App Name"
-  list = List.new("0")
-  list.load_from_file
-  erb :"index.html", locals: {list: list}, layout: :"layout.html"
+  # Need to get an arrays of lists here
+  all_data_paths = Dir["./data/*.md"]
+  all_data_paths.each {|path|}
+  all_files = all_data_paths.map {|path| File.basename path, ".md"}
+  all_lists = all_files.map {|file| List.new(file)}
+  all_lists = all_lists.each {|list| list.load_from_file}
+ 
+  
+  # Check folder how mawny list -> create List with name -> Add to all_lists Done
+  # list = List.new("0") Should be del
+  # list.load_from_file
+  # erb :"index.html", locals: {list: list}, layout: :"layout.html"
+  erb :"test_index.html", locals: {all_lists: all_lists}, layout: :"layout.html"
 end
 
 # UPDATE a list with id from params["id"]
@@ -61,8 +71,8 @@ post "/add-list" do
   new_list = List.new(1)
   new_list.name = params[:new_list_name]
   new_list.save!
-
+  
   redirect back
   
-
+  
 end
