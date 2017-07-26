@@ -3,11 +3,23 @@ const sortedContainers = sortable(".js-sortable-items", {
   forcePlaceholderSize: true
 });
 
+function myAjaxCall(event) {
+  event.preventDefault();
+  console.log("calling myAjaxCall with event", event);
+  console.log("This no longer submits the page")
+}
+
 // 
 sortedContainers.forEach(function(element) {
+  
   element.addEventListener("sortupdate", function(e) {
     console.log("We will learn how to save this dynamically");
-    $("button.save").removeClass("hidden");
+    $(e.target.parentElement).find("button.save").removeClass("hidden");
+    $("form.update-all").preventDefault();
+    $(e.target.parentElement).submit();
+    
+    
+
     /*
 
     This event is triggered when the user stopped sorting and the DOM position has changed.

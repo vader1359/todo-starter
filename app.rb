@@ -18,7 +18,7 @@ get "/" do
   all_lists = all_files.map {|file| List.new(file)}
   all_lists = all_lists.each {|list| list.load_from_file}
   new_id = all_files[-1].to_i + 1
- 
+  
   
   # Check folder how mawny list -> create List with name -> Add to all_lists Done
   # list = List.new("0") Should be del
@@ -29,7 +29,7 @@ end
 
 # UPDATE a list with id from params["id"]
 post "/lists/update" do
-  debug_params
+  
   
   list = List.new(params["id"])
   list.name = params["name"]
@@ -76,4 +76,11 @@ post "/add-list" do
   redirect back
   
   
+end
+
+
+post "/test_ajax" do
+  puts "PARAM: #{params}"
+
+  redirect back
 end

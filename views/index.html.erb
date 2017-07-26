@@ -8,7 +8,7 @@
 
  <div class="list_board"> 
   <% all_lists.each_with_index do |list, index| %>
-    <%= erb :"shared/_list.html", locals: {list: list} %>
+    <%= erb :"shared/_list.html", locals: {list: list, index: index} %>
   <% end %>
   
  </div> 
