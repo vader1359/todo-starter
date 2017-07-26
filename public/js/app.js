@@ -5,22 +5,12 @@ const sortedContainers = sortable(".js-sortable-items", {
 });
 
 function myAjaxCall(event) {
-  $("form.js-remote").on("submit", function(event){
-    console.log("ajax submitting...", form)
-    event.preventDefault();
-    console.log("calling myAjaxCall with event", event);
-    console.log("This no longer submits the page");
-    $.ajax({
-      type: form.attr("method"),
-      url: form.attr("action"),
-      data: form.serialize(),
-      success: function(data) {
-        form.find(".save").addClass("hidden");
-        console.log("Submission was successful.", data, form);
-      },
-      error: function(data) {
-        console.log("An error occurred.", data);
-      }
+  $(function () {
+    $("form.js-remote").submit(function () {
+      $post($(this).attr("action"), $(this).serialize(), function (response) {
+        alert(response);
+      });
+      return false;
     });
   });
   
