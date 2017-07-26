@@ -27,7 +27,10 @@ li.done {
   padding: 5px;
   width: 250px;
   font-size: 0.8em;
+  float: left;
+  margin-right: 10px;
 }
+
 .list-header {
   font-weight: bold;
   padding: 5px;
@@ -41,6 +44,7 @@ button {
   cursor: pointer;
   margin-top: -2px;
 }
+
 button.undone {
   background-color: rgba(0, 121, 191, 0.5);
 }
@@ -100,4 +104,9 @@ button.hidden {
 form.update-all,
 form.add-item {
   margin-bottom: 0;
+}
+
+.list_board {
+  width: 2000000px;
+  height: 10px;
 }
