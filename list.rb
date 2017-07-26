@@ -10,7 +10,7 @@ class List
     @items = []
   end
 
-  def load_from_file
+  def load_from_file()
     @lines = File.read(filename).split("\n")
     @name = @lines.shift # get the first line to be the List name
     @items = @lines.map.with_index {|line, index| Item.new_from_line(line, index)}
@@ -38,4 +38,5 @@ class List
     lines = [name] + @items.map(&:display_line)
     File.write(filename, lines.join("\n"))
   end
+  
 end

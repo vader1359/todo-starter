@@ -1,7 +1,9 @@
+
 const sortedContainers = sortable(".js-sortable-items", {
   forcePlaceholderSize: true
 });
 
+// 
 sortedContainers.forEach(function(element) {
   element.addEventListener("sortupdate", function(e) {
     console.log("We will learn how to save this dynamically");

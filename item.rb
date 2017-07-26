@@ -6,6 +6,7 @@ class Item
     self.status = status
     self.index = index
   end
+ 
 
   def done?
     status == "done"
