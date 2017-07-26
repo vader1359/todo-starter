@@ -5,8 +5,6 @@ const sortedContainers = sortable(".js-sortable-items", {
 });
 
 function myAjaxCall(event) {
-  $("form.js-remote").on("submit", function(event){
-    console.log("ajax submitting...", form)
     event.preventDefault();
     console.log("calling myAjaxCall with event", event);
     console.log("This no longer submits the page");
@@ -21,7 +19,6 @@ function myAjaxCall(event) {
       error: function(data) {
         console.log("An error occurred.", data);
       }
-    });
   });
   
 }

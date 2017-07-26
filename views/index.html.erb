@@ -6,7 +6,7 @@
   <input type="hidden" name="new_id" value="<%= new_id %>">
 </form>
 
-<form action="test_ajax" method="post" class="js-remote">
+<form action="/lists/update" method="post" class="js-remote">
  <div class="list_board"> 
   <% all_lists.each_with_index do |list, index| %>
     <%= erb :"shared/_list.html", locals: {list: list, index: index} %>
@@ -14,6 +14,7 @@
   
  </div> 
 </form>
+
 
 
 
