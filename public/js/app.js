@@ -1,12 +1,29 @@
 
 const sortedContainers = sortable(".js-sortable-items", {
-  forcePlaceholderSize: true
+  forcePlaceholderSize: true,
+  connectWith: ".connected"
 });
 
 function myAjaxCall(event) {
-  event.preventDefault();
-  console.log("calling myAjaxCall with event", event);
-  console.log("This no longer submits the page")
+  $("form.js-remote").on("submit", function(event){
+    console.log("ajax submitting...", form)
+    event.preventDefault();
+    console.log("calling myAjaxCall with event", event);
+    console.log("This no longer submits the page");
+    $.ajax({
+      type: form.attr("method"),
+      url: form.attr("action"),
+      data: form.serialize(),
+      success: function(data) {
+        form.find(".save").addClass("hidden");
+        console.log("Submission was successful.", data, form);
+      },
+      error: function(data) {
+        console.log("An error occurred.", data);
+      }
+    });
+  });
+  
 }
 
 // 
@@ -15,15 +32,15 @@ sortedContainers.forEach(function(element) {
   element.addEventListener("sortupdate", function(e) {
     console.log("We will learn how to save this dynamically");
     $(e.target.parentElement).find("button.save").removeClass("hidden");
-    $("form.update-all").preventDefault();
-    $(e.target.parentElement).submit();
+    $("form.update-all").submit(myAjaxCall(e));
+    // $(e.target.parentElement).submit();
     
     
-
+    
     /*
-
+    
     This event is triggered when the user stopped sorting and the DOM position has changed.
-
+    
     e.detail.item contains the current dragged element.
     e.detail.index contains the new index of the dragged element (considering only list items)
     e.detail.oldindex contains the old index of the dragged element (considering only list items)
