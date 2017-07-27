@@ -24,9 +24,23 @@ var myAjaxCall = function(event) {
     error: function(data) {
       // console.log("An error occurred.", data);
     } 
+  })
+}
+
+function myAjaxCall(event) {
+  $(function () {
+    $("form.js-remote").submit(function () {
+      $post($(this).attr("action"), $(this).serialize(), function (response) {
+        alert(response);
+      });
+      return false;
+    });
   });
   
 }
+
+
+
 
 sortedContainers.forEach(function(element) {
   
@@ -62,5 +76,9 @@ sortedContainers.forEach(function(element) {
     */
   });
 });
+
+
 $("form.update-all").on("submit", myAjaxCall);
+
+
 
