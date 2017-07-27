@@ -23,5 +23,20 @@
 - [ ] User can rename the current's list's name
 
 **Additional User Stories:**
+- [ ] Improve the UI/UX
+    - [x] Add new font
+    - [x] Add background and Guassian Blur effect and transparent list
+    - [ ] Create Diagonal Header and rotated List name 
+    - [ ] User can choose color  for list header's background
+- [ ] Add a controller on the left to quickly create and Search for the list
+    - [ ] Implement a Search function which will search all the list at the same time
+    - [ ] Create a new list by typing name and choosing color for the list
+- [ ] Add selected mod for the list
+    - [ ] Option will be shown at the bottom to Change list name, change color and delete the list
+- [ ] Add sortable function to the lists
+    - [ ] Sortable in the UI
+    - [ ] Save all of them to backend
+- [ ] Make the item tilded while drag and drop
+- [ ] Drag to delete item and list
 
 Feel free to add any more enhancements that you made here.
