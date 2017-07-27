@@ -40,5 +40,8 @@
     - [ ] Add animation to sortable
 - [ ] Make the item tilded while drag and drop
 - [ ] Drag to delete item and list
+- [ ] Add priority property to the items and implement the sort method in the list
+- [ ] Animation implementation
+- [ ] Handle Tab to next-input
 
 Feel free to add any more enhancements that you made here.

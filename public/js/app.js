@@ -8,6 +8,17 @@ const sortedListsContainers = sortable(".js-sortable-lists", {
   // forcePlaceholderSize: ,
 });
 
+// I need to send an Array of Id and an array of List name to back end
+
+var listOrderAjaxSubmit = function(event) {
+  event.preventDefault();
+  var listNames = [];
+  $listName = $.each($(".list-header"), function(index, value) {
+    listNames.push(value.innerText)
+  })
+  console.log(listNames)
+}
+
 var itemsAjaxSubmit = function(event) {
   event.preventDefault();
   // console.log("Two forms should be here");

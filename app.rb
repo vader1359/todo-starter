@@ -81,6 +81,7 @@ end
 
 post "/test_ajax" do
   puts params
+  puts "DATA #{data}"
 
   redirect back
 end

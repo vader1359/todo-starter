@@ -1,9 +1,10 @@
 <div class="list">
-  <form class="update-all" action="/lists/update" method="post">
+  <form class="update-all" action="/test_ajax" method="post">
     <input type="hidden" name="id" value="<%= list.id %>">
     <input type="hidden" name="name" value="<%= list.name %>">
     <div class="list-header-container">
-      <div class="list-header"><%= list.name %></div>
+      
+      <div class="list-header"><%= list.name %> </div>
       <!-- <div name="list-menu">
         <button class="save hidden" name="save_all">Save</button>
       </div> -->

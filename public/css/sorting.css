@@ -1,6 +1,7 @@
 .sortable-placeholder {
   /* you can set the background of your placeholder here */
   background-color: #999;
+  transform: rotate(0.5deg);
 }
 
 .sortable-dragging {

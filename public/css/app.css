@@ -48,12 +48,9 @@ li {
   border-radius: 4px;
   box-shadow: 0 1px 0 #ccc;
 }
-li.done {
-  text-decoration: line-through;
-  color: #999;
-}
+
 .list {
-  background-color: #efefef;
+  background-color:rgba(216,216,216,0.6);
   color: #666;
   padding: 0px 0px;
   width: 277px;
@@ -84,11 +81,14 @@ button {
   margin-top: -2px;
 }
 
+
 button.undone {
   background-color: rgba(0, 121, 191, 0.5);
+  display:none;
 }
 button.done {
   background-color: rgba(120, 120, 120, 0.5);
+  display:none;
 }
 input.new-item {
   background-color: transparent;
@@ -139,7 +139,8 @@ a.sort-link.current img {
   background-color: #42B6E7;
   border-radius: 35px 35px 0px 0px; 
   position: relative;
-  background-image: -webkit-linear-gradient(-85deg, #42B6E7 80%, #efefef 50%);
+  background-image: -webkit-linear-gradient(-85deg, #42B6E7 80%, rgba(216,216,216,0.6) 50%);
+  background-color: rb
   /* Should not be like this  */
 }
 
@@ -147,6 +148,12 @@ a.sort-link.current img {
   margin-top: 15px;
   padding: 10px;
   padding: but
+}
+
+.items li {
+  margin-top: 5px;
+  border: none;
+  box-shadow: none;
 }
 
 button.save {
@@ -162,10 +169,16 @@ form.add-item {
   margin-bottom: 0;
 }
 
+.controller_board{
+  float:left;
+  margin-left: 20px;
+  margin-top: 50px;
+  margin-right: 70px;
+}
+
 .list_board {
   width: 2000000px;
   height: 10px;
-  margin-left: 20px;
   padding: 20px;
 }
 
