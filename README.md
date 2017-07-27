@@ -13,7 +13,7 @@
 - [ ] User can cancel the list form after clicking on the "Add a list" text - Delay
 - [ ] User can add a new item by clicking on "Add an item..." and can click Cancel if desired - Delay
 - [x] User can drag to re-order items in a list and the list saves automatically
-- [ ] User can drag an item from one list to another and --- both lists save automatically
+- [x] User can drag an item from one list to another and --- both lists save automatically
 
 **Optional User Stories:**
 

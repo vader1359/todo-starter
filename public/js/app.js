@@ -4,33 +4,44 @@ const sortedContainers = sortable(".js-sortable-items", {
   connectWith: ".connected"
 });
 
-function myAjaxCall(event) {
-    event.preventDefault();
-    console.log("calling myAjaxCall with event", event);
-    console.log("This no longer submits the page");
-    $.ajax({
-      type: form.attr("method"),
-      url: form.attr("action"),
-      data: form.serialize(),
-      success: function(data) {
-        form.find(".save").addClass("hidden");
-        console.log("Submission was successful.", data, form);
-      },
-      error: function(data) {
-        console.log("An error occurred.", data);
-      }
+var myAjaxCall = function(event) {
+  event.preventDefault();
+  // console.log("Two forms should be here");
+  $currentForm = $(event.target);
+  console.log(event.target);
+  // console.log($currentForm);
+  
+  data = $currentForm.serializeArray();
+  // console.log("ajax data", data);
+  
+  $.ajax({
+    url: $currentForm.attr("action"),
+    method: $currentForm.attr("method"),
+    data: data,
+    success: function(data) {
+      // console.log("Submission was successful.", data)
+    },
+    error: function(data) {
+      // console.log("An error occurred.", data);
+    } 
   });
   
 }
 
-// 
 sortedContainers.forEach(function(element) {
   
   element.addEventListener("sortupdate", function(e) {
-    console.log("We will learn how to save this dynamically");
     $(e.target.parentElement).find("button.save").removeClass("hidden");
-    $("form.update-all").submit(myAjaxCall(e));
-    // $(e.target.parentElement).submit();
+    
+    $.each($("form.update-all"), function(index, value) {
+      $(value).submit();
+      
+    })
+    
+    
+    
+    
+    
     
     
     
@@ -51,3 +62,5 @@ sortedContainers.forEach(function(element) {
     */
   });
 });
+$("form.update-all").on("submit", myAjaxCall);
+

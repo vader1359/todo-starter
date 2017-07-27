@@ -80,7 +80,7 @@ end
 
 
 post "/test_ajax" do
-  puts "PARAM: #{params}"
+  puts params
 
   redirect back
 end

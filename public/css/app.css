@@ -1,5 +1,18 @@
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('/fonts/ProximaReg.otf');
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body, html {
+  font-family: 'ProximaNova';
+}
+
 body {
-  font-family: Sans-serif;
   background-image: url("/images/background.png");
   padding: 0px;
   margin: 0px;
@@ -11,6 +24,12 @@ body {
   background-color: rgba(0, 0, 0, 0.4); 
   padding: 0;
   margin:0;
+}
+
+h1#heading {
+  text-align: center;
+  font-size: 73px;
+  padding: 25px;
 }
 
 h1 {
@@ -36,16 +55,24 @@ li.done {
 .list {
   background-color: #efefef;
   color: #666;
-  padding: 5px;
-  width: 250px;
+  padding: 0px 0px;
+  width: 277px;
   font-size: 0.8em;
   float: left;
   margin-right: 10px;
+  border-radius: 35px;
 }
 
+
 .list-header {
+  
   font-weight: bold;
-  padding: 5px;
+  text-align: left;
+  font-size: 39px;
+  transform: rotate(-5deg);
+  padding-top: 20px;
+  margin-left: 25px;
+  color: white;
 }
 button.toggle {
   float: right;
@@ -66,8 +93,10 @@ button.done {
 input.new-item {
   background-color: transparent;
   border: none;
-  margin-left: 5px;
+  margin-top: 5px;
+  margin-left: 15px;
   margin-right: 5px;
+  margin-bottom: 50px;
   outline: none;
   font-size: 1em;
   width: calc(100% - 10px);
@@ -102,11 +131,22 @@ a.sort-link.current img {
 }
 
 .list-header-container {
-  display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-right: 5px;
+  width: 277px;
+  height: 100px;
+  background-color: #42B6E7;
+  border-radius: 35px 35px 0px 0px; 
+  position: relative;
+  background-image: -webkit-linear-gradient(-85deg, #42B6E7 80%, #efefef 50%);
+  /* Should not be like this  */
+}
+
+.items {
+  margin-top: 15px;
+  padding: 10px;
+  padding: but
 }
 
 button.save {
@@ -125,4 +165,5 @@ form.add-item {
 .list_board {
   width: 2000000px;
   height: 10px;
+  margin-left: 20px;
 }
