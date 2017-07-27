@@ -59,7 +59,7 @@ li.done {
   width: 277px;
   font-size: 0.8em;
   float: left;
-  margin-right: 10px;
+  margin-right: 15px;
   border-radius: 35px;
 }
 
@@ -166,4 +166,11 @@ form.add-item {
   width: 2000000px;
   height: 10px;
   margin-left: 20px;
+  padding: 20px;
 }
+
+.js-sortable-lists {
+  opacity: 0%
+}
+
+

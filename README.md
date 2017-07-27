@@ -34,8 +34,10 @@
 - [ ] Add selected mod for the list
     - [ ] Option will be shown at the bottom to Change list name, change color and delete the list
 - [ ] Add sortable function to the lists
-    - [ ] Sortable in the UI
-    - [ ] Save all of them to backend
+<!-- Add class sortablle-js to the div around the lists  -->
+    - [x] Sortable in the UI
+    - [ ] Save all of them to backend'
+    - [ ] Add animation to sortable
 - [ ] Make the item tilded while drag and drop
 - [ ] Drag to delete item and list
 

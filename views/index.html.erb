@@ -2,7 +2,7 @@
 
 
 
- <div class="list_board"> 
+ <div class="list_board js-sortable-lists"> 
   <% all_lists.each_with_index do |list, index| %>
     <%= erb :"shared/_list.html", locals: {list: list, index: index} %>
   <% end %>
