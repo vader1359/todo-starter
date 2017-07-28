@@ -26,7 +26,7 @@
 - [ ] Improve the UI/UX
     - [x] Add new font
     - [x] Add background and Guassian Blur effect and transparent list
-    - [ ] Create Diagonal Header and rotated List name 
+    - [x] Create Diagonal Header and rotated List name 
     - [ ] User can choose color  for list header's background
 - [ ] Add a controller on the left to quickly create and Search for the list
     - [ ] Implement a Search function which will search all the list at the same time
@@ -43,5 +43,5 @@
 - [ ] Add priority property to the items and implement the sort method in the list
 - [ ] Animation implementation
 - [ ] Handle Tab to next-input
-
+- [ ] Display ... if text is too long
 Feel free to add any more enhancements that you made here.

@@ -5,16 +5,19 @@
     <div class="list-header-container">
       
       <div class="list-header"><%= list.name %> </div>
+      <div class="header-cut">
+        <div id="triangle-topleft"></div>
+      </div>
       <!-- <div name="list-menu">
         <button class="save hidden" name="save_all">Save</button>
       </div> -->
     </div>
     <div class="items">
-    <ul class="js-sortable-items">
-      <% list.items.each_with_index do |item, index| %>
-      <%= erb :"shared/_item.html", locals: {item: item} %>
-      <% end %>
-    </ul>
+      <ul class="js-sortable-items">
+        <% list.items.each_with_index do |item, index| %>
+        <%= erb :"shared/_item.html", locals: {item: item} %>
+        <% end %>
+      </ul>
     </div>
   </form>
   

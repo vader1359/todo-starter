@@ -27,7 +27,7 @@ var itemsAjaxSubmit = function(event) {
   // console.log($currentForm);
   
   data = $currentForm.serializeArray();
-  console.log("ajax data", data);
+  // console.log("ajax data", data);
   
   $.ajax({
     url: $currentForm.attr("action"),
