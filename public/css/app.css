@@ -24,7 +24,7 @@ body {
   background-color: rgba(0, 0, 0, 0.4); 
   padding: 0;
   margin:0;
-
+  
 }
 
 h1#heading {
@@ -183,16 +183,49 @@ button.hidden {
   display: none;
 }
 
-form.update-all,
+form.update-all-items,
 form.add-item {
   margin-bottom: 0;
 }
 
 .controller_board{
   float:left;
-  margin-left: 20px;
+  margin-left: 30px;
   margin-top: 50px;
-  margin-right: 400px;
+  margin-right: 120px;
+}
+
+.control-input-bg {
+  background-color:rgba(216,216,216,0.6);
+  border-radius: 100px;
+  height: 45px;
+  width: 284px;
+  position: relative;
+}
+
+input:focus {
+    outline:none;
+}
+
+.control-input {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+  font-size: 14px;
+  background: none;
+  height: 20px;
+  border: none;
+  width: 200px;
+}
+
+.control-btn {
+  border: none;
+  background: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
 }
 
 .list_board {

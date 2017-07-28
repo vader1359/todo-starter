@@ -14,6 +14,7 @@
 - [ ] User can add a new item by clicking on "Add an item..." and can click Cancel if desired - Delay
 - [x] User can drag to re-order items in a list and the list saves automatically
 - [x] User can drag an item from one list to another and --- both lists save automatically
+    - [ ] Need to check and only submit the form changed
 
 **Optional User Stories:**
 
@@ -44,4 +45,5 @@
 - [ ] Animation implementation
 - [ ] Handle Tab to next-input
 - [ ] Display ... if text is too long
+- [ ] Auto expand HTML input
 Feel free to add any more enhancements that you made here.

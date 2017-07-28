@@ -80,8 +80,19 @@ end
 
 
 post "/test_ajax" do
+  # puts "PARAMS $" params
+  # puts "DATA #{data}"
   puts params
-  puts "DATA #{data}"
-
+  params[:names].map.with_index do |name, index|
+    filename = "data/#{index}.md"
+    puts filename
+    lines = File.read(filename).split("\n")
+    lines.delete_at(0)
+    lines.unshift(name)
+    File.write(filename, lines.join("\n"))
+    
+  end
+  
+  
   redirect back
 end

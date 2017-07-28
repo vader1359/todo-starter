@@ -21,9 +21,15 @@ class List
     "data/#{id}.md"
   end
   
-  def change_list_name(name)
-    self.name = name
+  def save_list_name_from_change(name, index)
+    filename = "data/${index}.md"
+    lines = File.read(filename).split("\n") # Need to update this lines and save back to the File
+    lines.delete_at(0)
+    lines.unshift(name)
+    File.write(filename, lines.join("\n"))
+    
   end
+  
   
   def toggle_item(name)
     puts "Finding |#{name}|"
