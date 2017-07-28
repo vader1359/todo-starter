@@ -34,7 +34,7 @@
     - [ ] Create a new list by typing name and choosing color for the list
 - [ ] Add selected mod for the list
     - [ ] Option will be shown at the bottom to Change list name, change color and delete the list
-- [ ] Add sortable function to the lists
+- [x] Add sortable function to the lists
 <!-- Add class sortablle-js to the div around the lists  -->
     - [x] Sortable in the UI
     - [ ] Save all of them to backend'
