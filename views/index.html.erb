@@ -1,19 +1,36 @@
-<h1 id="heading"><%= @title || "Torello" %></h1>
+<h1 id="heading">mTrello</h1>
 
-<form action="add-list" method="post">
-  <button type="submit">Add new list</button>
-  <input type="text" name="new_list_name">
-  <input type="hidden" name="new_id" value="<%= new_id %>">
-</form>
+<div class="controller_board">
+  <h1>Hello</h1>
+  <form action="add-list" method="post">
+    <div class="control-input-bg">
+      <input class="control-input" placeholder="Look for something?" type="text">
+      <button class="control-btn" type="submit"><img src="/images/search_btn.png" alt="add_button"></button>
+    </div>
+    <button class="control-btn" type="submit"><img src="/images/add_btn.png" alt="add_button"></button>
+    
+    
+    <input type="hidden" name="new_id" value="<%= new_id %>">
+  </form>
+  
+</div>
 
-<form action="test_ajax" method="post" class="js-remote">
- <div class="list_board"> 
+
+<div class="list_board js-sortable-lists"> 
   <% all_lists.each_with_index do |list, index| %>
-    <%= erb :"shared/_list.html", locals: {list: list, index: index} %>
+  <%= erb :"shared/_list.html", locals: {list: list, index: index} %>
   <% end %>
   
- </div> 
+</div>
+
+<form action="change-list-order" method="post">
+  <input type="hidden" name="">
 </form>
+
+<!-- I need to send an array of List name and an array of List-id to the back end  -->
+
+
+
 
 
 

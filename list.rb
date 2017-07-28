@@ -9,17 +9,28 @@ class List
     @lines = []
     @items = []
   end
-
+  
   def load_from_file()
     @lines = File.read(filename).split("\n")
     @name = @lines.shift # get the first line to be the List name
     @items = @lines.map.with_index {|line, index| Item.new_from_line(line, index)}
   end
-
+  
+  
   def filename
     "data/#{id}.md"
   end
-
+  
+  def save_list_name_from_change(name, index)
+    filename = "data/${index}.md"
+    lines = File.read(filename).split("\n") # Need to update this lines and save back to the File
+    lines.delete_at(0)
+    lines.unshift(name)
+    File.write(filename, lines.join("\n"))
+    
+  end
+  
+  
   def toggle_item(name)
     puts "Finding |#{name}|"
     item = items.find{|e| e.name == name}
@@ -29,14 +40,14 @@ class List
       puts "item not found: #{name}"
     end
   end
-
+  
   def add(name)
     self.items << Item.new(name)
   end
-
+  
   def save!
     lines = [name] + @items.map(&:display_line)
     File.write(filename, lines.join("\n"))
   end
-
+  
 end 
