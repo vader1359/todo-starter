@@ -24,7 +24,7 @@ var listOrderAjaxSubmit = function(event) {
   
   
   $.ajax({
-    url: "/test_ajax",
+    url: "/change_lists_order",
     method: "POST",
     data: listNames,
     

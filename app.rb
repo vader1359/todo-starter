@@ -79,7 +79,7 @@ post "/add-list" do
 end
 
 
-post "/test_ajax" do
+post "/change_lists_order" do
   # puts "PARAMS $" params
   # puts "DATA #{data}"
   puts params
