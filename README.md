@@ -9,16 +9,16 @@
 
 ### Check new features
 
-- [ ] User can create a new List so that she can maintain more than one list horizontally
+- [x] User can create a new List so that she can maintain more than one list horizontally
     - [x] Display add list correctly (background + input + button)
     D - [ ] Handling the button image it not work
     <!-- Cannot click on the buttono with image tag inside and cannot set css background for the image, too  -->
     - [x] Click on the button or enter -> Create a blank list with an Add an item input using Append
     <!-- Is there a way to reuse the _list.erb inside app.js? Dont have enough time to play with this  -->
     - [ ] Modify the Add an item and display it correctly
-    - [ ] Use append to display the item
-    - [ ] Use Ajax to send Add an item to backend and save it to file
-- [ ] User can cancel the list form after clicking on the "Add a list" text
+    - [x] Use append to display the list
+    - [x] Use Ajax to send Add an item to backend and save it to file
+- [x] User can cancel the list form after clicking on the "Add a list" text
 - [ ] User can add a new item by clicking on "Add an item..." and can click Cancel if desired - Delay
 - [x] User can drag to re-order items in a list and the list saves automatically
 - [x] User can drag an item from one list to another and --- both lists save automatically

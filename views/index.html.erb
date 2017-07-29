@@ -2,23 +2,22 @@
 
 
 
-
-<div class="list_board js-sortable-lists"> 
-  <div class="showing-list">
+<div class="list_board"> 
+  <div class="showing-list js-sortable-lists">
     <% all_lists.each_with_index do |list, index| %>
     <%= erb :"shared/_list.html", locals: {list: list, index: index} %>
     <% end %>
   </div>
-  
-  <form class="add-list float-left" action="/add-list" method="post">
-    <div class="control-input-bg add-control">
-      <button class="control-btn control-btn-add" type="submit"><img src="/images/add_btn.png" alt="add_button"></button>
-      <input class="add-control-input control-input" placeholder="Add new list?" type="text">
-      <input type="hidden" name="new_id" value="<%= new_id %>">
-    </div>
-  </form>
-  
+
 </div>
+
+<form class="add-list float-left" action="/add-list" method="post">
+  <div class="control-input-bg add-control">
+    <button class="control-btn control-btn-add" type="submit"><img src="/images/add_btn.png" alt="add_button"></button>
+    <input class="add-control-input control-input" placeholder="Add new list?" type="text">
+    <input type="hidden" name="new_id" value="<%= new_id %>">
+  </div>
+</form>
 
 <div class="control-input-bg search-control">
   <input class="search-control-input control-input" placeholder="Look for something?" type="text">

@@ -60,6 +60,8 @@ $("form.update-all-items").on("submit", itemsAjaxSubmit);
 const sortedListsContainers = sortable(".js-sortable-lists", {
 });
 
+
+
 var listOrderAjaxSubmit = function(event) {
   console.log($("event.target"))
   // event.preventDefault();
@@ -91,12 +93,12 @@ var listOrderAjaxSubmit = function(event) {
   
 }
 
-
 sortedListsContainers.forEach(function(element) {
   element.addEventListener("sortupdate", function(e) {
     listOrderAjaxSubmit()
   })
 })
+
 
 
 
@@ -107,7 +109,9 @@ var addNewListAjaxSubmit = function(event) {
   $currentForm = event.target;
   var new_id = 1 + parseInt($($(".list").last().children().children()[0]).val())
   new_list_name = $($(".add-list")[0][1]).val()
-
+  
+ 
+  
   $(".showing-list").append(
     `
     <div class="list">
@@ -134,7 +138,7 @@ var addNewListAjaxSubmit = function(event) {
     </div>
     `
   );
-  
+  $(".add-control-input").val("")
   
   
   $.ajax({
@@ -145,7 +149,7 @@ var addNewListAjaxSubmit = function(event) {
         name: "new_id", 
         value: new_id
       },
-
+      
       {
         name: "new_list_name", 
         value: new_list_name
@@ -160,12 +164,20 @@ var addNewListAjaxSubmit = function(event) {
     } 
   })
   
+  
+  
+  
 }
 
 $(".add-list").on("submit", addNewListAjaxSubmit);
 
 
+// Minor setups
+var cleanFocusOut = function() {
+  $(".add-control-input").focusout(function(){$(".add-control-input").val("")})
+}
 
+cleanFocusOut();
 
 
 

@@ -198,11 +198,11 @@ form.add-item {
 
 .control-input-bg {
   background-color:rgba(216,216,216,0.6);
-  border-radius: 100px;
+  border-radius: 35px;
   height: 45px;
+  margin-top: -25px;
   
   position: relative;
-  margin-bottom: 10px;
 }
 
 .choose-color {
@@ -242,7 +242,7 @@ input:focus {
 .control-btn {
   border: none;
   background: none;
-  position: absolute;
+   position: absolute; 
   top: 50%;
   transform: translateY(-50%);
   right: 10px;
