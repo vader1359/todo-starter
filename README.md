@@ -9,8 +9,16 @@
 
 ### Check new features
 
-- [x] User can create a new List so that she can maintain more than one list horizontally
-- [ ] User can cancel the list form after clicking on the "Add a list" text - Delay
+- [ ] User can create a new List so that she can maintain more than one list horizontally
+    - [x] Display add list correctly (background + input + button)
+    D - [ ] Handling the button image it not work
+    <!-- Cannot click on the buttono with image tag inside and cannot set css background for the image, too  -->
+    - [x] Click on the button or enter -> Create a blank list with an Add an item input using Append
+    <!-- Is there a way to reuse the _list.erb inside app.js? Dont have enough time to play with this  -->
+    - [ ] Modify the Add an item and display it correctly
+    - [ ] Use append to display the item
+    - [ ] Use Ajax to send Add an item to backend and save it to file
+- [ ] User can cancel the list form after clicking on the "Add a list" text
 - [ ] User can add a new item by clicking on "Add an item..." and can click Cancel if desired - Delay
 - [x] User can drag to re-order items in a list and the list saves automatically
 - [x] User can drag an item from one list to another and --- both lists save automatically
@@ -21,9 +29,10 @@
 - [ ] User can rename a list. For example “Today” to “Inbox”
 - [ ] User can delete an item
 - [ ] User can delete a list
-- [ ] User can rename the current's list's name
 
 **Additional User Stories:**
+
+- [ ] Only use Ajax to submit
 - [ ] Improve the UI/UX
     - [x] Add new font
     - [x] Add background and Guassian Blur effect and transparent list
@@ -34,14 +43,14 @@
     - [ ] Create a new list by typing name and choosing color for the list
 - [ ] Add selected mod for the list
     - [ ] Option will be shown at the bottom to Change list name, change color and delete the list
-- [x] Add sortable function to the lists
+- [x] Add sortable function to the lists 
+<!-- Still not get it will fix the file order later. Too tired for now.  -->
 <!-- Add class sortablle-js to the div around the lists  -->
     - [x] Sortable in the UI
     - [ ] Save all of them to backend'
     - [ ] Add animation to sortable
 - [ ] Make the item tilded while drag and drop
 - [ ] Drag to delete item and list
-- [ ] Add priority property to the items and implement the sort method in the list
 - [ ] Animation implementation
 - [ ] Handle Tab to next-input
 - [ ] Display ... if text is too long

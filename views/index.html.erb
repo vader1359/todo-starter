@@ -1,33 +1,50 @@
 <h1 id="heading">mTrello</h1>
 
-<div class="controller_board">
-  <h1>Hello</h1>
-  <form action="add-list" method="post">
-    <div class="control-input-bg">
-      <input class="control-input" placeholder="Look for something?" type="text">
-      <button class="control-btn" type="submit"><img src="/images/search_btn.png" alt="add_button"></button>
+
+
+
+<div class="list_board js-sortable-lists"> 
+  <div class="showing-list">
+    <% all_lists.each_with_index do |list, index| %>
+    <%= erb :"shared/_list.html", locals: {list: list, index: index} %>
+    <% end %>
+  </div>
+  
+  <form class="add-list float-left" action="/add-list" method="post">
+    <div class="control-input-bg add-control">
+      <button class="control-btn control-btn-add" type="submit"><img src="/images/add_btn.png" alt="add_button"></button>
+      <input class="add-control-input control-input" placeholder="Add new list?" type="text">
+      <input type="hidden" name="new_id" value="<%= new_id %>">
     </div>
-    <button class="control-btn" type="submit"><img src="/images/add_btn.png" alt="add_button"></button>
-    
-    
-    <input type="hidden" name="new_id" value="<%= new_id %>">
   </form>
   
 </div>
 
-
-<div class="list_board js-sortable-lists"> 
-  <% all_lists.each_with_index do |list, index| %>
-  <%= erb :"shared/_list.html", locals: {list: list, index: index} %>
-  <% end %>
-  
+<div class="control-input-bg search-control">
+  <input class="search-control-input control-input" placeholder="Look for something?" type="text">
+  <button class="control-btn control-btn-search" type="submit"><img src="/images/search_btn.png" alt="add_button"></button>
 </div>
 
-<form action="change-list-order" method="post">
-  <input type="hidden" name="">
-</form>
 
-<!-- I need to send an array of List name and an array of List-id to the back end  -->
+
+<!-- <form action="choose-color">
+  <div class="choose-color">
+    <ul class="color-list">
+      <img src="images/blue.png" alt="blue-color">
+      <img src="images/white.png" alt="green-color">
+      <img src="images/yellow.png" alt="yellow-color">
+      <img src="images/red.png" alt="red-color">
+      <img src="images/green.png" alt="yellow-color">
+      <img src="images/brown.png" alt="red-color">
+      
+    </ul>
+  </div>
+  
+</form> -->
+
+
+
+
 
 
 

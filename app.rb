@@ -84,6 +84,9 @@ post "/change_lists_order" do
   # puts "DATA #{data}"
   puts params
   params[:names].map.with_index do |name, index|
+    # 0 Today 1 Tomorrow 2 Done
+    # 0 Done 1 Today 2 Tomorrow
+    
     filename = "data/#{index}.md"
     puts filename
     lines = File.read(filename).split("\n")
@@ -95,4 +98,9 @@ post "/change_lists_order" do
   
   
   redirect back
+end
+
+post "/add_list" do
+  # redirect back
+  puts params
 end
