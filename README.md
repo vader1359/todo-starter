@@ -11,7 +11,7 @@
 
 - [x] User can create a new List so that she can maintain more than one list horizontally
     - [x] Display add list correctly (background + input + button)
-    D - [ ] Handling the button image it not work
+    - [x] Handling the button image it not work
     <!-- Cannot click on the buttono with image tag inside and cannot set css background for the image, too  -->
     - [x] Click on the button or enter -> Create a blank list with an Add an item input using Append
     <!-- Is there a way to reuse the _list.erb inside app.js? Dont have enough time to play with this  -->
@@ -19,7 +19,7 @@
     - [x] Use append to display the list
     - [x] Use Ajax to send Add an item to backend and save it to file
 - [x] User can cancel the list form after clicking on the "Add a list" text
-- [ ] User can add a new item by clicking on "Add an item..." and can click Cancel if desired - Delay
+- [x] User can add a new item by clicking on "Add an item..." and can click Cancel if desired
 - [x] User can drag to re-order items in a list and the list saves automatically
 - [x] User can drag an item from one list to another and --- both lists save automatically
     - [ ] Need to check and only submit the form changed
@@ -32,15 +32,12 @@
 
 **Additional User Stories:**
 
-- [ ] Only use Ajax to submit
-- [ ] Improve the UI/UX
+- [x] Improve the UI/UX
     - [x] Add new font
     - [x] Add background and Guassian Blur effect and transparent list
     - [x] Create Diagonal Header and rotated List name 
     - [ ] User can choose color  for list header's background
-- [ ] Add a controller on the left to quickly create and Search for the list
-    - [ ] Implement a Search function which will search all the list at the same time
-    - [ ] Create a new list by typing name and choosing color for the list
+- [ ] Implement a Search function which will search all the list at the same time
 - [ ] Add selected mod for the list
     - [ ] Option will be shown at the bottom to Change list name, change color and delete the list
 - [x] Add sortable function to the lists 
@@ -49,10 +46,9 @@
     - [x] Sortable in the UI
     - [ ] Save all of them to backend'
     - [ ] Add animation to sortable
-- [ ] Make the item tilded while drag and drop
+- [x] Make the item tilded while drag and drop
 - [ ] Drag to delete item and list
 - [ ] Animation implementation
-- [ ] Handle Tab to next-input
 - [ ] Display ... if text is too long
 - [ ] Auto expand HTML input
 Feel free to add any more enhancements that you made here.

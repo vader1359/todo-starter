@@ -44,6 +44,7 @@ sortedContainers.forEach(function(element) {
   element.addEventListener("sortupdate", function(e) {
     // Easy way first
     $.each($("form.update-all-items"), function(index, value) {
+   
       $(value).submit();
       console.log(`"VALUE": ${value}`)
       
@@ -174,7 +175,7 @@ $(".add-list").on("submit", addNewListAjaxSubmit);
 
 // Minor setups
 var cleanFocusOut = function() {
-  $(".add-control-input").focusout(function(){$(".add-control-input").val("")})
+  $("input").focusout(function(){$("input").val("")})
 }
 
 cleanFocusOut();
