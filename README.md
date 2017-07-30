@@ -52,3 +52,6 @@
 - [ ] Auto expand HTML input
 
 **Video Walkthrough:**
+
+
+![](walkthrough.gif)
