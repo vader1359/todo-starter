@@ -73,7 +73,7 @@ post "/add-list" do
   new_list.name = params[:new_list_name]
   new_list.save!
   
-  redirect back
+  redirect to("/")
   
   
 end

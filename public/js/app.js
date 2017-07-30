@@ -4,6 +4,7 @@ const sortedContainers = sortable(".js-sortable-items", {
   connectWith: ".connected"
 });
 
+
 // Create Ajax Submit for forms
 
 // Sending List Order
@@ -44,7 +45,7 @@ sortedContainers.forEach(function(element) {
   element.addEventListener("sortupdate", function(e) {
     // Easy way first
     $.each($("form.update-all-items"), function(index, value) {
-   
+      
       $(value).submit();
       console.log(`"VALUE": ${value}`)
       
@@ -111,7 +112,7 @@ var addNewListAjaxSubmit = function(event) {
   var new_id = 1 + parseInt($($(".list").last().children().children()[0]).val())
   new_list_name = $($(".add-list")[0][1]).val()
   
- 
+  
   
   $(".showing-list").append(
     `
@@ -165,9 +166,7 @@ var addNewListAjaxSubmit = function(event) {
     } 
   })
   
-  
-  
-  
+
 }
 
 $(".add-list").on("submit", addNewListAjaxSubmit);
@@ -197,7 +196,6 @@ e.detail.newEndList contains all elements in the list the dragged item was dragg
 e.detail.newStartList contains all elements in the list the dragged item was dragged from
 e.detail.oldStartList contains all elements in the list the dragged item was dragged from BEFORE it was dragged from it
 */
-
 
 
 

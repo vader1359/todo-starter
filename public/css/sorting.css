@@ -3,7 +3,7 @@
   background-color: #d8d8d8;
 }
 
-.sortable-dragging {
+.sortable-dragging.item {
   /* /* background: url(/images/fake_tilda.png); */
   
   background: url(/images/fake_tilda.png);
