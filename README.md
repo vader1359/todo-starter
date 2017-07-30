@@ -1,4 +1,5 @@
 **Required User Stories:**
+*Timespent*: **38hours**
 
 ### Check what's already done in your starting app:
 
