@@ -43,9 +43,6 @@
     - [ ] Change the background of selected list
     - [ ] Option will be shown at the bottom to Change list name, change color and delete the list
 - [x] Add sortable function to the lists 
-<!-- Still not get it will fix the file order later. Too tired for now.  -->
-<!-- Add class sortablle-js to the div around the lists  -->
-<!-- Forget to handling this  -->
     - [x] Sortable in the UI
     - [ ] Save all of them to backend'
     - [ ] Add animation to sortable
@@ -53,3 +50,5 @@
 - [x] Drag to delete item
 - [ ] Animation implementation
 - [ ] Auto expand HTML input
+
+**Video Walkthrough:**
