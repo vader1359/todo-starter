@@ -5,6 +5,7 @@
     <div class="list-header-container">
       
       <div class="list-header"><%= list.name %> </div>
+      <button class="big-trash" type="submit"><img src="/images/big_trash.png" alt="delete-list"></button>
       <div class="header-cut">
         <div id="triangle-topleft"></div>
       </div>
@@ -14,6 +15,8 @@
         <% list.items.each_with_index do |item, index| %>
         <%= erb :"shared/_item.html", locals: {item: item} %>
         <% end %>
+        <h1 class="trash-line">=#=#=#=#=#=#=#=#=#=</h1>
+        <img class="trash" src="/images/trash.png" alt="delete">
       </ul>
     </div>
   </form>

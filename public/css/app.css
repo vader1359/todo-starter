@@ -167,6 +167,9 @@ a.sort-link.current img {
 
 .items li {
   line-height: 25px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   height:30px;
   margin-top: 5px;
   vertical-align: center;
@@ -266,6 +269,26 @@ input:focus {
 
 .float-left{
   float:left;
+}
+
+.trash-line {
+  color: white;
+  margin-top: 50px;
+  /* visibility: hidden; */
+}
+
+.trash {
+  margin-top: 20px;
+  padding-bottom: 30px;
+  margin-left: 115px;
+}
+
+.big-trash {
+  background: none;
+  border: none;
+  float: left;
+  margin-left: 230px;
+  margin-top: -40px;
 }
 
 

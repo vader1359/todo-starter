@@ -104,3 +104,22 @@ post "/add_list" do
   # redirect back
   puts params
 end
+
+
+post "/modify_list" do 
+  puts params
+
+  redirect back
+
+end
+
+post "/delete_list" do
+  puts params
+  puts params[:id_to_delete]
+  puts "/data/#{params[:id_to_delete]}.md"
+
+  File.delete("./data/#{params[:id_to_delete]}.md") if File.exist?("./data/#{params[:id_to_delete]}.md")
+
+  redirect back
+  
+end

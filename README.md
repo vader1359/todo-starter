@@ -22,13 +22,13 @@
 - [x] User can add a new item by clicking on "Add an item..." and can click Cancel if desired
 - [x] User can drag to re-order items in a list and the list saves automatically
 - [x] User can drag an item from one list to another and --- both lists save automatically
-    - [ ] Need to check and only submit the form changed
+    - [x] Need to check and only submit the form changed
 
 **Optional User Stories:**
 
 - [ ] User can rename a list. For example “Today” to “Inbox”
-- [ ] User can delete an item
-- [ ] User can delete a list
+- [x] User can delete an item
+- [x] User can delete a list
 
 **Additional User Stories:**
 
@@ -36,19 +36,20 @@
     - [x] Add new font
     - [x] Add background and Guassian Blur effect and transparent list
     - [x] Create Diagonal Header and rotated List name 
-    - [ ] User can choose color  for list header's background
+    - [x] Display ... if text is too long
+    - [ ] User can choose color for list header's background
 - [ ] Implement a Search function which will search all the list at the same time
 - [ ] Add selected mod for the list
+    - [ ] Change the background of selected list
     - [ ] Option will be shown at the bottom to Change list name, change color and delete the list
 - [x] Add sortable function to the lists 
 <!-- Still not get it will fix the file order later. Too tired for now.  -->
 <!-- Add class sortablle-js to the div around the lists  -->
+<!-- Forget to handling this  -->
     - [x] Sortable in the UI
     - [ ] Save all of them to backend'
     - [ ] Add animation to sortable
 - [x] Make the item tilded while drag and drop
-- [ ] Drag to delete item and list
+- [x] Drag to delete item
 - [ ] Animation implementation
-- [ ] Display ... if text is too long
 - [ ] Auto expand HTML input
-Feel free to add any more enhancements that you made here.
